@@ -21,5 +21,49 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/shell/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/shell/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/mfe1/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/mfe1/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/mfe1/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/mfe1/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/mfe2/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/mfe2/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/mfe3/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/mfe3/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/mfe4/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/mfe4/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/mfe5/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/mfe5/tsconfig.spec.json"
+    }
+  ]
 }
