@@ -1,2 +1,1 @@
-cd projects/mfe5
-npm start
+npm run start:mfe5

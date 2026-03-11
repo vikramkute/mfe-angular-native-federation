@@ -1,2 +1,1 @@
-cd projects/mfe3
-npm start
+npm run start:mfe3

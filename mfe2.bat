@@ -1,2 +1,1 @@
-cd projects/mfe2
-npm start
+npm run start:mfe2
