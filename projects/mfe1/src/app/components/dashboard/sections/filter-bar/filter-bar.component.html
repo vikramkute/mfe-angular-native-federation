@@ -1,0 +1,23 @@
+<section class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between" aria-label="Dashboard filters">
+  <div class="inline-flex rounded-lg border border-slate-200 bg-white p-1" role="tablist" aria-label="Category filter">
+    @for (option of options; track option) {
+      <button
+        type="button"
+        role="tab"
+        [attr.aria-selected]="selected() === option"
+        class="rounded-md px-3 py-1.5 text-sm"
+        [class.bg-slate-900]="selected() === option"
+        [class.text-white]="selected() === option"
+        [class.text-slate-700]="selected() !== option"
+        (click)="select(option)">
+        {{ option }}
+      </button>
+    }
+  </div>
+
+  <label class="flex w-full items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 md:w-[405px]">
+    <span aria-hidden="true">🔍</span>
+    <span class="sr-only">{{ searchLabel() }}</span>
+    <input type="search" [placeholder]="searchLabel()" class="w-full bg-transparent text-sm outline-none" />
+  </label>
+</section>

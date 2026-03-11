@@ -1,0 +1,23 @@
+<div class="min-h-screen bg-slate-50 text-slate-900">
+  <app-mfe1-navigation />
+
+  <main id="main" class="mx-auto max-w-[1440px] p-6 md:p-8">
+    <app-mfe1-filter-bar />
+    <app-mfe1-stat-cards />
+
+    <section class="mt-8 grid grid-cols-1 gap-6 xl:grid-cols-12" aria-label="Performance and people">
+      <div class="xl:col-span-7">
+        <app-mfe1-line-chart-panel />
+      </div>
+      <div class="xl:col-span-5">
+        <app-mfe1-people-list />
+      </div>
+      <div class="xl:col-span-5">
+        <app-mfe1-source-list />
+      </div>
+      <div class="xl:col-span-7">
+        <app-mfe1-bar-chart-panel />
+      </div>
+    </section>
+  </main>
+</div>

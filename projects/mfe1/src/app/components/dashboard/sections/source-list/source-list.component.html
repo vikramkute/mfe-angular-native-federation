@@ -1,0 +1,21 @@
+<article class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" aria-label="Source list">
+  <h2 class="text-lg font-semibold">List</h2>
+  <table class="mt-4 w-full border-collapse text-sm" aria-label="Traffic source table">
+    <thead>
+      <tr class="border-b border-slate-200 text-left text-slate-500">
+        <th scope="col" class="py-2 font-medium">Source</th>
+        <th scope="col" class="py-2 font-medium">Sessions</th>
+        <th scope="col" class="py-2 font-medium">Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (row of rows(); track row.source + row.sessions) {
+        <tr class="border-b border-slate-100">
+          <td class="py-2">{{ row.source }}</td>
+          <td class="py-2">{{ row.sessions }}</td>
+          <td class="py-2">{{ row.change }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</article>

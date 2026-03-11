@@ -14,16 +14,15 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render title and description', async () => {
+  it('should render dashboard layout', async () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     await fixture.whenStable();
 
     const compiled = fixture.nativeElement as HTMLElement;
 
-    expect(compiled.querySelector('h2')?.textContent).toContain('Client Search');
-    expect(compiled.querySelector('p')?.textContent).toContain(
-      'Search and view client records.',
-    );
+    expect(compiled.querySelector('h1')?.textContent).toContain('Dashboard app');
+    expect(compiled.textContent).toContain('Line chart');
+    expect(compiled.textContent).toContain('Bar chart');
   });
 });

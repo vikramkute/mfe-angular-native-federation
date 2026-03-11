@@ -1,0 +1,16 @@
+<article class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm" aria-label="Revenue line chart panel">
+  <h2 class="text-lg font-semibold">Line chart</h2>
+  <div class="mt-4 rounded-lg border border-dashed border-slate-300 bg-slate-50 p-4">
+    <div class="h-40 w-full rounded bg-gradient-to-r from-slate-200 to-slate-100" aria-hidden="true"></div>
+  </div>
+  <div class="mt-4 grid grid-cols-2 gap-4 text-xs text-slate-500">
+    <div>
+      <p class="font-medium text-slate-700">Y Axis</p>
+      <p>{{ yAxis().join(' · ') }}</p>
+    </div>
+    <div>
+      <p class="font-medium text-slate-700">X Axis</p>
+      <p>{{ xAxis().join(' · ') }}</p>
+    </div>
+  </div>
+</article>
