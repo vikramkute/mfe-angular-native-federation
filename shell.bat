@@ -1,2 +1,1 @@
-cd projects/shell
-npm start
+npm run start:shell
