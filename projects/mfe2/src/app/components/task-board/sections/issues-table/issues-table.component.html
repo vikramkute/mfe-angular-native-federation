@@ -1,0 +1,47 @@
+<section aria-label="Active issues table" class="overflow-hidden rounded-lg border border-slate-200 bg-white">
+  <div class="overflow-x-auto">
+    <table class="min-w-[920px] w-full border-collapse">
+      <thead>
+        <tr class="h-14 border-b border-slate-200 text-left text-base font-medium text-slate-500">
+          <th class="px-4">Task</th>
+          <th class="px-4">Title</th>
+          <th class="px-4">Project</th>
+          <th class="px-4">Priority</th>
+          <th class="px-4 text-right">Date</th>
+          <th class="px-4 text-center">Owner</th>
+          <th class="px-4"></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (issue of issues(); track issue.id) {
+          <tr class="h-14 border-b border-slate-200 text-base font-medium text-slate-900 last:border-b-0">
+            <td class="px-4 text-slate-500">{{ issue.id }}</td>
+            <td class="max-w-[460px] truncate px-4">{{ issue.title }}</td>
+            <td class="px-4">
+              <span class="inline-flex rounded-lg border border-slate-200 bg-white px-2 py-1 text-xs font-semibold">
+                {{ issue.project }}
+              </span>
+            </td>
+            <td class="px-4">
+              <span
+                class="inline-flex rounded-lg border px-2 py-1 text-xs font-semibold"
+                [class]="'inline-flex rounded-lg border px-2 py-1 text-xs font-semibold ' + priorityClasses(issue.priority)"
+              >
+                {{ issue.priority }}
+              </span>
+            </td>
+            <td class="px-4 text-right text-slate-500">{{ issue.date }}</td>
+            <td class="px-4">
+              <div class="mx-auto grid size-8 place-items-center rounded-full bg-slate-200 text-xs font-semibold text-slate-700">
+                {{ issue.ownerInitials }}
+              </div>
+            </td>
+            <td class="px-4 text-right">
+              <button type="button" class="text-slate-500" [attr.aria-label]="'Open actions for ' + issue.id">•••</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

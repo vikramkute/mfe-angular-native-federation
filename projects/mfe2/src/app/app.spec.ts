@@ -14,16 +14,16 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render title and description', async () => {
+  it('should render task board shell', async () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     await fixture.whenStable();
 
     const compiled = fixture.nativeElement as HTMLElement;
 
-    expect(compiled.querySelector('h2')?.textContent).toContain('Deposits');
-    expect(compiled.querySelector('p')?.textContent).toContain(
-      'Create and review deposit transactions.',
-    );
+    expect(compiled.querySelector('h1')?.textContent).toContain('Task app');
+    expect(compiled.querySelector('h2')?.textContent).toContain('Active issues');
+    const searchInput = compiled.querySelector('#ticket-search') as HTMLInputElement | null;
+    expect(searchInput?.placeholder).toContain('Search tickets...');
   });
 });
