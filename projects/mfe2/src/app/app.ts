@@ -1,15 +1,13 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { TaskBoardComponent } from './components/task-board/task-board.component';
 
 @Component({
   selector: 'app-mfe2-root',
-  imports: [],
+  imports: [TaskBoardComponent],
   templateUrl: './app.html',
   host: {
     class: 'block',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class App {
-  protected readonly title = signal('Deposits');
-  protected readonly description = signal('Create and review deposit transactions.');
-}
+export class App {}
